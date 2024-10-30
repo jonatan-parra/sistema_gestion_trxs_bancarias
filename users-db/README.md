@@ -4,7 +4,5 @@
 * **Nombre:** users-db
 * **Paradigma:** Relacional
 * **Sistema de Gestión de Base de Datos:** MySQL
+* **Despliegue:** GCP -> SQL
 
-### Despliegue
-
-GCP -> SQL
