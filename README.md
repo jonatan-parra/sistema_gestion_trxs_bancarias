@@ -12,4 +12,4 @@ Sistema de inteligencia de negocios para el análisis y gestión de transaccione
 ![Alt text](https://github.com/jonatan-parra/sistema_gestion_trxs_bancarias/blob/main/Diagramas/Vista%20de%20conectores.png)
 
 ## Vista de despliegue
-![Alt text](hhttps://github.com/jonatan-parra/sistema_gestion_trxs_bancarias/blob/main/Diagramas/Vista%20de%20despliegue.png)
+![Alt text](https://github.com/jonatan-parra/sistema_gestion_trxs_bancarias/blob/main/Diagramas/Vista%20de%20despliegue.png)
