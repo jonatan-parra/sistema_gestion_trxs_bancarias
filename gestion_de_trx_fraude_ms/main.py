@@ -2,7 +2,7 @@ import functions_framework
 
 from google.cloud import firestore
 
-db = firestore.Client(project="isbn-2024i", database="gestiones_db")
+db = firestore.Client(project="isbn-2024ii", database="gestiones_db")
 
 @functions_framework.http
 def gestiones_api(request):
