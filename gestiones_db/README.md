@@ -13,6 +13,7 @@
     "id": "gestion-123",
     "details": {
         "user_id": "1",
+        "id_trx": "456"
         "tipo_de_fraude": "Hurto de tarjeta",
         "description": "Se evidencian compras no usuales a media noche, otros clientes también presentan fraude en el mismo comercio",
         "acciones": "Se bloquea comercio"
