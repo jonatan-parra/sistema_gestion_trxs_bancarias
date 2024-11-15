@@ -2,10 +2,10 @@ import functions_framework
 
 from google.cloud import firestore
 
-db = firestore.Client(project="cbse-2024ii-438703", database="reclamos_db")
+db = firestore.Client(project="cbse-2024ii-438703", database="reclamos-db")
 
 @functions_framework.http
-def gestiones_api(request):
+def reclamos_api(request):
 
     if request.method == 'POST':
 

@@ -43,6 +43,32 @@ resource "google_cloudfunctions2_function" "isbn_tasks_ms" {
   }
 }
 
+# Crear segunda Cloud Function de 2ª generación
+resource "google_cloudfunctions2_function" "registro_reclamos_ms" {
+  name        = "registro-reclamos-ms"
+  location    = var.region
+
+  service_config {
+    min_instance_count = 1
+    max_instance_count = 5
+  }
+
+  labels = {
+    env = "development"
+  }
+
+  build_config {
+    runtime     = "python312"
+    entry_point = "tasks_api" # Set the entry point in the code  
+    source {
+      storage_source {
+        bucket = google_storage_bucket.Cloud_function_bucket.name
+        object = google_storage_bucket_object.zip.name
+      }
+    } 
+  }
+}
+
 # Configuración de acceso para permitir invocaciones no autenticadas
 resource "google_cloudfunctions2_function_iam_member" "allow_unauthenticated" {
   cloud_function = google_cloudfunctions2_function.isbn_tasks_ms.name

@@ -10,10 +10,9 @@
 
 ```json
 {
-    "id": "gestion-123",
+    "id": "reclamo-123",
     "details": {
-        "user_id": "1",
-        "id_trx": "456",
+        "cliente_id": "1",
         "description": "Cliente reporta robo en hora de las madrugadas, le realizan 10 compras"
     }
 }

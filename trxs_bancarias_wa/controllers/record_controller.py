@@ -1,5 +1,6 @@
 from flask import Blueprint, render_template, request, jsonify, redirect, url_for
 from services.record_service import RecordService
+from services.record_reclamo_service import RecordReclamoService
 
 record_api = Blueprint('record_api', __name__)
 
@@ -30,6 +31,23 @@ def create_record():
     RecordService.create_record(name, last_name, email, role, is_active, task_id, task_name, task_description)
     return redirect(url_for('record_api.index'))
 
+@record_api.route('/record_reclamo', methods=['POST'])
+def create_record_reclamo():
+
+    data = request.form
+    id = data.get('id')
+    cliente_id = data.get('cliente_id')
+    description = data.get('description')
+
+    RecordReclamoService.create_record_reclamo(id, cliente_id, description)
+    return redirect(url_for('record_api.index'))
+
 @record_api.route('/')
 def index():
     return render_template('index.html')
+
+@record_api.route('/reclamo')
+def reclamo():
+    return render_template('reclamo.html')
+
+
