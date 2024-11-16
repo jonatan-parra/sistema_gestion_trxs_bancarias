@@ -2,6 +2,7 @@ from flask import Blueprint, request, jsonify
 from services.record_service import RecordService
 from services.record_reclamos_service import RecordReclamosService
 from services.record_gestiones_service import RecordGestionesService
+from services.record_user_service import RecordUserService
 
 record_api = Blueprint('record_api', __name__)
 
@@ -11,6 +12,19 @@ def create_record_controller():
     data = request.get_json()
 
     response = RecordService.create_record_service(data)
+
+    if response == True:
+        return jsonify("Record has been successfully created."), 201
+
+    return jsonify("Error al guardar"), 400
+
+
+@record_api.route('/api/record_user', methods=['POST'])
+def create_record_user_controller():
+
+    data = request.get_json()
+
+    response = RecordUserService.create_record_user_service(data)
 
     if response == True:
         return jsonify("Record has been successfully created."), 201

@@ -1,6 +1,6 @@
 from consumers.users_ms.user_consumer import *
 
-class RecordService:
+class RecordUserService:
 
     @staticmethod
     def create_record_user_service(data):

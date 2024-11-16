@@ -2,6 +2,7 @@ from flask import Blueprint, render_template, request, jsonify, redirect, url_fo
 from services.record_service import RecordService
 from services.record_reclamo_service import RecordReclamoService
 from services.record_gestion_service import RecordGestionService
+from services.record_user_service import RecordUserService
 
 record_api = Blueprint('record_api', __name__)
 
@@ -58,6 +59,21 @@ def create_record_gestion():
     return redirect(url_for('record_api.index'))
 
 
+@record_api.route('/record_user', methods=['POST'])
+def create_record_user():
+
+    data = request.form
+    name = data.get('name')
+    last_name = data.get('last_name')
+    email = data.get('email')
+    role = data.get('role')
+    is_active = data.get('is_active')
+
+    RecordUserService.create_record_user(name, last_name, email, role, is_active)
+    return redirect(url_for('record_api.index'))
+
+
+
 
 
 @record_api.route('/')
@@ -72,5 +88,10 @@ def reclamo():
 @record_api.route('/gestion')
 def gestion():
     return render_template('gestion.html')
+
+
+@record_api.route('/usuario')
+def usuario():
+    return render_template('usuario.html')
 
 
