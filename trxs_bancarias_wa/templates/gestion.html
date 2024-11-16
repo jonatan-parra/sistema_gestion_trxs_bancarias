@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gestiones</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Registrar reclamo</h1>
+    <form method="POST" action="/record_gestion">
+        <label for="id">Id gestión</label><br>
+        <input type="text" id="id" name="id" required><br>
+
+        <label for="user_id">Usuario:</label><br>
+        <input type="text" id="user_id" name="user_id"></input><br>
+
+        <label for="id_trx">ID trx:</label><br>
+        <input type="text" id="id_trx" name="id_trx"></input><br>
+
+        <label for="tipo_de_fraude">Tipo de fraude:</label><br>
+        <input type="text" id="tipo_de_fraude" name="tipo_de_fraude"></input><br>
+
+        <label for="description">Descripción:</label><br>
+        <input type="text" id="description" name="description"></input><br>
+
+        <label for="acciones">Acciones:</label><br>
+        <input type="text" id="acciones" name="acciones"></input><br>
+
+
+        <button type="submit">Crear</button>
+    </form>
+</body>
+</html>

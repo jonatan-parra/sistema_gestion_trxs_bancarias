@@ -21,3 +21,12 @@ def create_record_reclamo(data):
     response = requests.post(url, json=data)
 
     return response
+
+# Create Gestion
+def create_record_gestion(data):
+
+    url = base_url + '/api/record_gestion'
+
+    response = requests.post(url, json=data)
+
+    return response
