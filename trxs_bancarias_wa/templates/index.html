@@ -5,8 +5,17 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <h1>Registro</h1>
-    <form method="POST" action="/record">
+    <h1>Menú</h1>
+
+    <a target="_blank" class="fcc-btn" href="http://localhost/usuario">Registrar usuario</a>
+    <br>
+    <br>
+    <a target="_blank" class="fcc-btn" href="http://localhost/reclamo">Registrar reclamo</a>
+    <br>
+    <br>
+    <a target="_blank" class="fcc-btn" href="http://localhost/gestion">Registrar gestión</a>
+
+    <!-- <form method="POST" action="/record">
         <label for="name">Nombre del usuario:</label><br>
         <input type="text" id="name" name="name" required><br>
 
@@ -32,6 +41,6 @@
 
         <input type="text" id="task_description" name="task_description"></input><br>
         <button type="submit">Crear</button>
-    </form>
+    </form> -->
 </body>
 </html>
